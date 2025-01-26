@@ -1046,6 +1046,9 @@ summary::-webkit-details-marker {
   .grid--peek.slider--mobile .grid__item {
     box-sizing: content-box;
     margin: 0;
+
+    /* Added width: 100% for full screen */
+    width: 100%;
   }
 
   .grid--peek .grid__item {
@@ -1053,7 +1056,10 @@ summary::-webkit-details-marker {
   }
 
   .grid--peek.slider .grid__item:first-of-type {
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
+
+    /* Changed margin to 0 */
+    margin: 0;
   }
 
   /* Fix to show some space at the end of our sliders in all browsers */

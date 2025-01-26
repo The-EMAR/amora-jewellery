@@ -763,6 +763,14 @@ class SliderComponent extends HTMLElement {
     const previousPage = this.currentPage;
     this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
 
+    this.currentPaginationDots = this.querySelectorAll('.slider-pagination li');
+
+    this.currentPaginationDots.forEach(element => {
+      element.classList.remove('active');
+    });
+
+    this.getCurrentDot = this.querySelector(`.slider-pagination .dot-${this.currentPage}`)?.classList.add('active');    
+
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
       this.pageTotalElement.textContent = this.totalPages;
@@ -1267,3 +1275,34 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+// PDP FIXED ADD TO CART
+
+// Select elements
+const regularCta = document.querySelector('.product-form__buttons');
+const fixedCta = document.querySelector('.fixed-cta');
+
+if (regularCta && fixedCta) {
+  function checkScrollPosition() {
+    const ctaPosition = regularCta.getBoundingClientRect();
+    let getPositionTop = ctaPosition.top - window.innerHeight;
+    let getPositionBottom = ctaPosition.bottom;
+   
+    if (getPositionTop < 25) {
+      fixedCta.style.display = 'none'; // Show fixed CTA
+    } else {
+      fixedCta.style.display = 'block'; // Hide fixed CTA
+    }
+  
+    if (getPositionBottom < 0) {
+      fixedCta.style.display = 'block'; // Show fixed CTA
+    }
+  }
+  
+  // Listen to scroll event
+  window.addEventListener('scroll', checkScrollPosition);
+  
+  // Also check scroll position on page load
+  checkScrollPosition();
+}
+

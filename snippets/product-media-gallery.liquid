@@ -125,7 +125,7 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
-    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %}">
+    <div class="slider-buttons quick-add-hidden{% if hide_mobile_slider %} small-hide{% endif %} hidden">
       <button
         type="button"
         class="slider-button slider-button--prev"
@@ -136,12 +136,14 @@
           {{- 'icon-caret.svg' | inline_asset_content -}}
         </span>
       </button>
-      <div class="slider-counter caption">
+      
+      <div class="slider-counter caption hidden">
         <span class="slider-counter--current">1</span>
         <span aria-hidden="true"> / </span>
         <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
         <span class="slider-counter--total">{{ media_count }}</span>
       </div>
+
       <button
         type="button"
         class="slider-button slider-button--next"
@@ -153,6 +155,21 @@
         </span>
       </button>
     </div>
+
+    {% if product.media.size > 1 %}
+      <div class="slider-pagination">
+        {% assign media_count = product.media.size %}
+
+        <ul>
+          {% for item in (1..media_count) %}
+            <li class="dot-{{ forloop.index }} {% if forloop.index == 1 %} active{% endif %}">
+              {{ forloop.index }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div><!-- /.slider-paggionation -->
+    {% endif %}
+
   </slider-component>
   {%- if first_3d_model -%}
     <button

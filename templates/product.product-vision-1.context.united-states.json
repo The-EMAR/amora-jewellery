@@ -1,0 +1,18 @@
+{
+  "parent": "product.product-vision-1.json",
+  "context": {
+    "market": "united-states"
+  },
+  "sections": {
+    "main": {
+      "settings": {
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "padding_top": 12,
+        "enable_sticky_info": false
+      },
+      "blocks": {}
+    }
+  }
+}

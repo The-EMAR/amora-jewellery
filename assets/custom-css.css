@@ -1,0 +1,51 @@
+/* Custom CSS */
+
+.fixed-cta {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  /* Fixed Add to Cart Button */
+  .fixed-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background-color: var(--gradient-background);
+    border: .1rem solid var(--gradient-background);
+    z-index: 10;
+  }
+  
+  .fixed-cta button {
+    cursor: pointer;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+/* Custom pagiantion */
+.slider-pagination ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 1rem;
+}
+
+.slider-pagination ul li {
+  display: block;
+  opacity: .5;
+  font-size: 0;
+  width: 2rem;
+  height: .2rem;
+  background-color: gray;
+}
+
+.slider-pagination ul li.active {
+  opacity: 1;
+}
