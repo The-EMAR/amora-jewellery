@@ -769,7 +769,7 @@ class SliderComponent extends HTMLElement {
       element.classList.remove('active');
     });
 
-    this.getCurrentDot = this.querySelector(`.slider-pagination .dot-${this.currentPage}`)?.classList.add('active');    
+    this.getCurrentDot = this.querySelector(`.slider-pagination .dot-${this.currentPage}`)?.classList.add('active');
 
     if (this.currentPageElement && this.pageTotalElement) {
       this.currentPageElement.textContent = this.currentPage;
@@ -1051,7 +1051,7 @@ class SlideshowComponent extends SliderComponent {
     const slideScrollPosition =
       this.slider.scrollLeft +
       this.sliderFirstItemNode.clientWidth *
-        (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
+      (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
     });
@@ -1287,22 +1287,43 @@ if (regularCta && fixedCta) {
     const ctaPosition = regularCta.getBoundingClientRect();
     let getPositionTop = ctaPosition.top - window.innerHeight;
     let getPositionBottom = ctaPosition.bottom;
-   
+
     if (getPositionTop < 25) {
       fixedCta.style.display = 'none'; // Show fixed CTA
     } else {
       fixedCta.style.display = 'block'; // Hide fixed CTA
     }
-  
+
     if (getPositionBottom < 0) {
       fixedCta.style.display = 'block'; // Show fixed CTA
     }
   }
-  
+
   // Listen to scroll event
   window.addEventListener('scroll', checkScrollPosition);
-  
+
   // Also check scroll position on page load
   checkScrollPosition();
 }
 
+// SPLIDE CDN INIT
+document.addEventListener('DOMContentLoaded', function () {
+  let splides = document.querySelectorAll('.splide');
+
+  if (splides.length > 0 && splides) {
+    splides.forEach(splide => {
+      console.log(splide);
+      
+      let initSplide =  new Splide(splide,{
+        autoScroll: {
+          speed: 1,
+        },
+        arrows: false,
+        pagination: false,
+        type: 'loop',
+      })
+
+      initSplide.mount(window.splide.Extensions);
+    });
+  }
+});

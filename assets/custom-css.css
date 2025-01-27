@@ -49,3 +49,9 @@
 .slider-pagination ul li.active {
   opacity: 1;
 }
+
+/* SPLIDE CDN CSS EDIT */
+
+.splide .splide__track {
+  width: 100%;
+}
