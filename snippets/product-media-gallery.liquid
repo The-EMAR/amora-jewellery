@@ -85,6 +85,7 @@
           %}
         </li>
       {%- endif -%}
+
       {%- for media in product.media -%}
         {% if media_position >= limit
           or media_position >= 1
@@ -107,6 +108,7 @@
                 assign lazy_load = true
               endif
             -%}
+
             {% render 'product-thumbnail',
               media: media,
               media_count: media_count,
@@ -156,9 +158,8 @@
       </button>
     </div>
 
-    {% if product.media.size > 1 %}
+    {% if media_count > 1 %}
       <div class="slider-pagination">
-        {% assign media_count = product.media.size %}
 
         <ul>
           {% for item in (1..media_count) %}
