@@ -1277,9 +1277,10 @@ if (!customElements.get('bulk-add')) {
 }
 
 // PDP FIXED ADD TO CART
-
 // Select elements
+// Regular cta's from pdp
 const regularCta = document.querySelector('.product-form__buttons');
+// Snippet buy-buttons-hidden
 const fixedCta = document.querySelector('.fixed-cta');
 
 if (regularCta && fixedCta) {
@@ -1307,22 +1308,35 @@ if (regularCta && fixedCta) {
 }
 
 // SPLIDE CDN INIT
-document.addEventListener('DOMContentLoaded', function () {
-  let splides = document.querySelectorAll('.splide');
+if (!customElements.get('announcement-bar-slider')) {
+  class AnnouncementBarSlider extends HTMLElement {
+    constructor() {
+      super();
 
-  if (splides && splides.length > 0) {
-    splides.forEach(splide => {
-      
-      let initSplide =  new Splide(splide,{
+      this.initSlider();
+    }
+
+    initSlider() {
+      this.slider = new Splide(this,{
         autoScroll: {
           speed: 1,
         },
+        // direction: 'ttb',
+        // height: 30,
         arrows: false,
         pagination: false,
         type: 'loop',
+        // autoplay: true,
       })
 
-      initSplide.mount(window.splide.Extensions);
-    });
+      this.slider.mount(window.splide.Extensions);
+      // initSplide.mount();
+    }
   }
-});
+
+  customElements.define(
+    'announcement-bar-slider',
+    AnnouncementBarSlider,
+  );
+}
+

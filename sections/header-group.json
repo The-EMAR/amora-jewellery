@@ -8,21 +8,13 @@
         "announcement_UHeVdF": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store 2",
-            "link": ""
-          }
-        },
-        "announcement_3cQaV7": {
-          "type": "announcement",
-          "settings": {
             "text": "Welcome to our store",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_UHeVdF",
-        "announcement_3cQaV7"
+        "announcement_UHeVdF"
       ],
       "settings": {
         "color_scheme": "scheme-4",
