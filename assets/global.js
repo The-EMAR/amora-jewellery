@@ -1310,9 +1310,8 @@ if (regularCta && fixedCta) {
 document.addEventListener('DOMContentLoaded', function () {
   let splides = document.querySelectorAll('.splide');
 
-  if (splides.length > 0 && splides) {
+  if (splides && splides.length > 0) {
     splides.forEach(splide => {
-      console.log(splide);
       
       let initSplide =  new Splide(splide,{
         autoScroll: {
