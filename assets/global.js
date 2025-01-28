@@ -1307,6 +1307,7 @@ if (regularCta && fixedCta) {
   checkScrollPosition();
 }
 
+
 // SPLIDE CDN INIT
 if (!customElements.get('announcement-bar-slider')) {
   class AnnouncementBarSlider extends HTMLElement {
