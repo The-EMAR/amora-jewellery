@@ -18,6 +18,13 @@
           "type": "price",
           "settings": {}
         },
+        "tickets_t8P4Mt": {
+          "type": "tickets",
+          "settings": {
+            "slide_1_icon": "shopify:\/\/shop_images\/4b0d15f5752398c439dee306fc58d821-diamond-black-icon.webp",
+            "slide_1_text": "MOISSANITE"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -46,6 +53,7 @@
         "vendor",
         "title",
         "price",
+        "tickets_t8P4Mt",
         "variant_picker",
         "buy_buttons",
         "collapsible_tab_Aim3yb"

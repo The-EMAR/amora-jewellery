@@ -205,6 +205,7 @@
                   role="status"
                   {{ block.shopify_attributes }}
                 >
+
                   <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
@@ -661,6 +662,33 @@
                 </product-recommendations>
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
+              {%- when 'tickets' -%}
+                {% if block.settings.slide_1_icon != blank or block.settings.slide_1_text != blank %}
+                  <ticket-slider class="splide tickets" role="group">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        {% if block.settings.slide_1_icon != blank or block.settings.slide_1_text != blank %}
+                          <li class="splide__slide">
+                            <div class="ticket">
+                              {% if block.settings.slide_1_icon != blank %}
+                                {%- assign icon = block.settings.slide_1_icon -%}
+
+                                <div class="ticket__image">
+                                  {{ icon | image_url: width: icon.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
+                                </div><!-- /.ticket__image -->
+    
+                                {% if block.settings.slide_1_text != blank %}
+                                  <p>{{ block.settings.slide_1_text }}</p>
+                                {% endif %}
+                              {% endif %}
+                            </div><!-- /.ticket -->
+                          </li>
+                        {% endif %}
+                        <li class="splide__slide">VVS1</li>
+                      </ul>
+                    </div>
+                  </ticket-slider>       
+                {% endif %}
             {%- endcase -%}
           {%- endfor -%}
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -809,6 +837,27 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.sku.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "tickets",
+      "name": "Tickets",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Slide 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "slide_1_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "slide_1_text",
+          "label": "Text"
         }
       ]
     },
