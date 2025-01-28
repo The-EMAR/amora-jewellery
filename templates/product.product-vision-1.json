@@ -32,14 +32,13 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
+        "collapsible_tab_Aim3yb": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "PRODUCT DETAILS",
+            "icon": "eye",
+            "content": "{{ product.description }}",
+            "page": ""
           }
         }
       },
@@ -49,8 +48,7 @@
         "price",
         "variant_picker",
         "buy_buttons",
-        "description",
-        "share"
+        "collapsible_tab_Aim3yb"
       ],
       "settings": {
         "enable_sticky_info": true,

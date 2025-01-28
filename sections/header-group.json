@@ -5,6 +5,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_YkErDa": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store 2",
+            "link": ""
+          }
+        },
         "announcement_UHeVdF": {
           "type": "announcement",
           "settings": {
@@ -14,14 +21,13 @@
         }
       },
       "block_order": [
+        "announcement_YkErDa",
         "announcement_UHeVdF"
       ],
       "settings": {
         "color_scheme": "scheme-4",
         "show_line_separator": true,
         "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
