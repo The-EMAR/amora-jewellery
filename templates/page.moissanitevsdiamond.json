@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_3WaMtY": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_XAzxdk": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Glitter and shine<\/strong><\/p><p>The ability of a stone to refract light is called its “refractive index” and it determines the brilliance of the jewel. Moissanite has a higher refractive index, which makes it more brilliant than diamond. The glow of moissanite is multi-colored and all colors of light can be seen with the naked eye.<\/p><p><strong>Hardness and durability<\/strong><\/p><p>Diamond is the hardest material on planet Earth with a hardness of 10 on the Mohs scale. Moissanite is the second hardest and the average hardness of each stone is 9.5 on the Mohs scale.<\/p><p> <\/p><p>Both stones have very high scratch resistance and brittleness. It is almost impossible to break or scratch a moissanite or diamond. While zirconia loses its shine over time, moissanite and diamond remain shiny even after years of use, making them timeless.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_XAzxdk"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/moissanite-vs-diamond-comparison-compare-1000x1778-1-628x874x0x196x628x480x1709645128.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_peVyaX": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_cqePhF": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Ethics and environmental protection<\/strong><\/p><p>There has long been a debate about diamond mining and how it affects the environment and the people involved in its extraction. The poor working conditions and conflicts that this industry creates cannot be underestimated.<\/p><p>Moissanite is created in controlled laboratory conditions and has a significantly smaller environmental footprint than diamond mining. The moissanite production process avoids the criticized diamond mining processes, which often result in the exploitation of human labor and a lasting harmful environmental footprint.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_cqePhF"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/01132016-diamonds_03-1024x682-2-1-1-1-602x416x22x0x560x416x1710186514.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_6xVYWU": {
+      "type": "rich-text",
+      "blocks": {
+        "text_jn3BUw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Moissanite holds the promise of a future where beauty and responsibility go hand in hand, and investing in timeless beauty has never been more worthwhile.<br\/><br\/><a href=\"\/\" title=\"\/\"><strong>Browse our moissanite jewelry here.<\/strong><\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_jn3BUw"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_3WaMtY",
+    "image_with_text_peVyaX",
+    "rich_text_6xVYWU"
+  ]
+}

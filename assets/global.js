@@ -1288,7 +1288,7 @@ if (regularCta && fixedCta) {
     const ctaPosition = regularCta.getBoundingClientRect();
     let getPositionTop = ctaPosition.top - window.innerHeight;
     let getPositionBottom = ctaPosition.bottom;
-
+    
     if (getPositionTop < 25) {
       fixedCta.style.display = 'none'; // Show fixed CTA
     } else {
@@ -1301,7 +1301,7 @@ if (regularCta && fixedCta) {
   }
 
   // Listen to scroll event
-  window.addEventListener('scroll', checkScrollPosition);
+  // window.addEventListener('scroll', checkScrollPosition);
 
   // Also check scroll position on page load
   checkScrollPosition();

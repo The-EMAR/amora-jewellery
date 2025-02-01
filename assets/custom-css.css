@@ -29,14 +29,22 @@
 }
 
 /* Custom pagiantion */
+
 .slider-pagination ul {
+  display: none;
   list-style-type: none;
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 0;
   gap: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .slider-pagination ul {
+    display: flex;
+  }
 }
 
 .slider-pagination ul li {
