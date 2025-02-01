@@ -44,6 +44,7 @@
 @media (max-width: 767px) {
   .slider-pagination ul {
     display: flex;
+    padding: 0 1.5rem;
   }
 }
 
@@ -112,7 +113,7 @@
 
   .product--vision-2 .product__media-wrapper {
     position: sticky;
-    top: 0;
+    top: -.6rem;
   }
 
   .product--vision-2 .product__info-wrapper {
@@ -123,8 +124,12 @@
 
   /* PDP MEDIA */
 
-  .product--vision-2 .product__media{
-    filter: brightness(0.9);
+  .product--vision-2 .product__media-list{
+    transition: .3s;
+  }
+
+  .product--vision-2 .product-media-container {
+    width: 100% !important;
   }
 
 }
