@@ -1307,6 +1307,41 @@ if (regularCta && fixedCta) {
   checkScrollPosition();
 }
 
+// PDP VISION 2 Media Overlay 
+const pdpVision2 = document.querySelector('.product--vision-2');
+
+if (pdpVision2) {
+  const infoWrapper = pdpVision2.querySelector('.product__info-wrapper');
+  const mediaWrapper = pdpVision2.querySelector('.product__media-wrapper');
+  const productMedia = pdpVision2.querySelector('.product__media-list');
+  const handleFirstMediaPosition = parseInt(infoWrapper.getBoundingClientRect().top);
+
+  function checkScrollPositionPDPMedia() {
+    let infoWrapperTop = infoWrapper.getBoundingClientRect().top;
+    let mediaWrapperBottom = mediaWrapper.getBoundingClientRect().bottom;
+   
+
+    if (mediaWrapperBottom > infoWrapperTop) {
+      let kolkoOstavaDo0 = parseInt(infoWrapperTop);
+      let calclPercent = parseFloat(kolkoOstavaDo0 / handleFirstMediaPosition);
+
+      if (calclPercent > 0.70) {
+        productMedia.style = `filter: brightness(1)`;
+      }
+     
+      if (calclPercent < 0.70 && calclPercent > 0.50) {
+        productMedia.style = `filter: brightness(${calclPercent})`;
+      }
+    }
+  }
+
+  // Listen to scroll event
+  window.addEventListener('scroll', checkScrollPositionPDPMedia);
+
+  // Also check scroll position on page load
+  checkScrollPositionPDPMedia();
+}
+
 
 // SPLIDE CDN INIT
 if (!customElements.get('announcement-bar-slider')) {

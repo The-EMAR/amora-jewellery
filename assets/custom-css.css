@@ -15,7 +15,7 @@
     right: 0;
     padding: 1.5rem;
     /* background-color: var(--gradient-background); */
-    background-color: #d200ff03;
+    background-color: hsla(289, 100%, 50%, 0.012);
     border: .1rem solid var(--gradient-background);
     backdrop-filter: blur(1.5rem);
     z-index: 10;
@@ -101,3 +101,31 @@
   height: 100%;
   max-height: 3rem;
 }
+
+/* PDP VISION 2 */
+
+/* Mobile */
+@media (max-width: 767px) {
+  .page-wdith--pdp-vision-2 {
+    padding: 0;
+  }
+
+  .product--vision-2 .product__media-wrapper {
+    position: sticky;
+    top: 0;
+  }
+
+  .product--vision-2 .product__info-wrapper {
+    position: relative;
+    padding: 0 1.5rem;
+    background-color: var(--gradient-background);
+  }
+
+  /* PDP MEDIA */
+
+  .product--vision-2 .product__media{
+    filter: brightness(0.9);
+  }
+
+}
+
