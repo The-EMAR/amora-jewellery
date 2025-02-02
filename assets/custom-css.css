@@ -55,10 +55,13 @@
   width: 2rem;
   height: .2rem;
   background-color: gray;
+  transition: .3s opacity;
+  opacity: 0;
 }
 
 .slider-pagination ul li.active {
   opacity: 1;
+  transition: .3s opacity;
 }
 
 /* SPLIDE CDN CSS EDIT */
@@ -141,6 +144,11 @@
     padding-top: 100%;
   }
 
+  .product--vision-2 .slider.slider--mobile {
+    margin: 0;
+    transition: .3s filter;
+  }
+
   /* Price */
 
   .product--vision-2 .price--large {
@@ -152,6 +160,22 @@
   .product--vision-2.v2-center .tickets .ticket {
     justify-content: center;
     align-items: center;
+  }
+
+  /* Slide Pagination */
+  .product--vision-2 .slider-pagination {
+    margin-top: -.5rem;
+  }
+
+  .product--vision-2 .slider-pagination ul {
+    padding: 0;
+    margin: 0;
+    gap: 0;
+  }
+
+  .product--vision-2 .slider-pagination ul li {
+    background-color: #b0b0b0;
+    flex: 1;
   }
 }
 
