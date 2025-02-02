@@ -1321,7 +1321,7 @@ if (pdpVision2) {
     let mediaWrapperBottom = mediaWrapper.getBoundingClientRect().bottom;
 
     if (mediaWrapperBottom < infoWrapperTop) {
-      productMedia.style = `filter: brightness(1)`;
+      productMedia.style = `filter: brightness(1.1)`;
     }
    
 
@@ -1329,11 +1329,14 @@ if (pdpVision2) {
       let kolkoOstavaDo0 = parseInt(infoWrapperTop);
       let calclPercent = parseFloat(kolkoOstavaDo0 / handleFirstMediaPosition);
 
-      if (calclPercent > 0.70) {
-        productMedia.style = `filter: brightness(1)`;
+      if (calclPercent > 0.95) {
+        productMedia.style = `filter: brightness(1.1)`;
       }
      
-      if (calclPercent < 0.70 && calclPercent > 0.50) {
+      if (calclPercent < 0.95 && calclPercent > 0.70) {
+        // let newCalc = 0.90 - calclPercent; 
+        // console.log(newCalc);
+        
         productMedia.style = `filter: brightness(${calclPercent})`;
       }
     }
