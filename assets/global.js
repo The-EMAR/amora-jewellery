@@ -1307,7 +1307,7 @@ if (regularCta && fixedCta) {
   checkScrollPosition();
 }
 
-// PDP VISION 2 Media Overlay 
+// PDP VISION 2 Media Overlay Functionality 
 const pdpVision2 = document.querySelector('.product--vision-2');
 
 if (pdpVision2) {
@@ -1319,6 +1319,10 @@ if (pdpVision2) {
   function checkScrollPositionPDPMedia() {
     let infoWrapperTop = infoWrapper.getBoundingClientRect().top;
     let mediaWrapperBottom = mediaWrapper.getBoundingClientRect().bottom;
+
+    if (mediaWrapperBottom < infoWrapperTop) {
+      productMedia.style = `filter: brightness(1)`;
+    }
    
 
     if (mediaWrapperBottom > infoWrapperTop) {
@@ -1337,6 +1341,7 @@ if (pdpVision2) {
 
   // Listen to scroll event
   window.addEventListener('scroll', checkScrollPositionPDPMedia);
+  window.addEventListener('resize', checkScrollPositionPDPMedia);
 
   // Also check scroll position on page load
   checkScrollPositionPDPMedia();
