@@ -123,7 +123,7 @@
     background-color: var(--gradient-background);
   }
 
-  .product--vision-2.center .product__info-wrapper {
+  .product--vision-2.v2-center .product__info-wrapper {
     text-align: center;
   }
 
@@ -149,7 +149,7 @@
 
   /* Tickets */
 
-  .product--vision-2.center .tickets .ticket {
+  .product--vision-2.v2-center .tickets .ticket {
     justify-content: center;
     align-items: center;
   }

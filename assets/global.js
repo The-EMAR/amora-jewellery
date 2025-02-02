@@ -1324,13 +1324,10 @@ if (pdpVision2) {
       productMedia.style = `filter: brightness(1.1)`;
     }
    
-
     if (mediaWrapperBottom > infoWrapperTop) {
       let kolkoOstavaDo0 = parseInt(infoWrapperTop);
       let calclPercent = parseFloat(kolkoOstavaDo0 / handleFirstMediaPosition);
       let addMisingPercent = calclPercent + 0.20;
-
-      console.log(addMisingPercent);
       
 
       if (addMisingPercent > 0.90) {
@@ -1346,14 +1343,25 @@ if (pdpVision2) {
     }
   }
 
+  function detectDevice() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /android|iphone|ipad|ipod|blackberry|opera mini|iemobile|mobile/i.test(userAgent) || window.innerWidth < 768;
+
+    if (isMobile) {      
+      window.addEventListener('scroll', checkScrollPositionPDPMedia);
+    }
+  }
+
   // Listen to scroll event
-  window.addEventListener('scroll', checkScrollPositionPDPMedia);
-  window.addEventListener('resize', checkScrollPositionPDPMedia);
+  window.addEventListener('resize', ()=>{
+    // Call the function
+    detectDevice();
+  });
 
   // Also check scroll position on page load
   checkScrollPositionPDPMedia();
+  detectDevice();
 }
-
 
 // SPLIDE CDN INIT
 if (!customElements.get('announcement-bar-slider')) {

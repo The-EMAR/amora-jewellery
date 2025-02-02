@@ -73,8 +73,9 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
+
   <div class="page-width page-wdith--pdp-vision-2">
-    <div class="product product--vision-2 center product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="product product--vision-2 {% if section.settings.pdp_v2_content_text_align_center %} v2-center {% endif %} product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
@@ -2135,6 +2136,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "pdp_v2_content_text_align_center",
+      "default": false,
+      "label": "Make a content Text Align Center in mobile"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
