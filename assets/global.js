@@ -1328,16 +1328,20 @@ if (pdpVision2) {
     if (mediaWrapperBottom > infoWrapperTop) {
       let kolkoOstavaDo0 = parseInt(infoWrapperTop);
       let calclPercent = parseFloat(kolkoOstavaDo0 / handleFirstMediaPosition);
+      let addMisingPercent = calclPercent + 0.20;
 
-      if (calclPercent > 0.95) {
+      console.log(addMisingPercent);
+      
+
+      if (addMisingPercent > 0.90) {
         productMedia.style = `filter: brightness(1.1)`;
       }
      
-      if (calclPercent < 0.95 && calclPercent > 0.70) {
+      if (addMisingPercent < 0.90 && addMisingPercent > 0.70) {
         // let newCalc = 0.90 - calclPercent; 
         // console.log(newCalc);
         
-        productMedia.style = `filter: brightness(${calclPercent})`;
+        productMedia.style = `filter: brightness(${addMisingPercent})`;
       }
     }
   }
