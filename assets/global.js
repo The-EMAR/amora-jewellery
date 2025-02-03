@@ -1288,7 +1288,7 @@ if (regularCta && fixedCta) {
     const ctaPosition = regularCta.getBoundingClientRect();
     let getPositionTop = ctaPosition.top - window.innerHeight;
     let getPositionBottom = ctaPosition.bottom;
-    
+
     if (getPositionTop < 25) {
       fixedCta.style.display = 'none'; // Show fixed CTA
     } else {
@@ -1314,53 +1314,61 @@ if (pdpVision2) {
   const infoWrapper = pdpVision2.querySelector('.product__info-wrapper');
   const mediaWrapper = pdpVision2.querySelector('.product__media-wrapper');
   const productMedia = pdpVision2.querySelector('.product__media-list');
-  const handleFirstMediaPosition = parseInt(infoWrapper.getBoundingClientRect().top);
+
+
 
   function checkScrollPositionPDPMedia() {
     let infoWrapperTop = infoWrapper.getBoundingClientRect().top;
     let mediaWrapperBottom = mediaWrapper.getBoundingClientRect().bottom;
 
+    // console.log('Bottom Image: ' + mediaWrapperBottom + ' Info Top: ' + infoWrapperTop);
+
     if (mediaWrapperBottom < infoWrapperTop) {
       productMedia.style = `filter: brightness(1.1)`;
     }
-   
-    if (mediaWrapperBottom > infoWrapperTop) {
-      let kolkoOstavaDo0 = parseInt(infoWrapperTop);
-      let calclPercent = parseFloat(kolkoOstavaDo0 / handleFirstMediaPosition);
-      let addMisingPercent = calclPercent + 0.20;
-      
 
-      if (addMisingPercent > 0.90) {
+    if (mediaWrapperBottom > infoWrapperTop) {
+      let calclPercent = parseFloat(parseInt(infoWrapperTop) / parseInt(mediaWrapperBottom));
+      let manualMargin = calclPercent + 0.20;
+
+      if (manualMargin > 0.90) {
         productMedia.style = `filter: brightness(1.1)`;
       }
-     
-      if (addMisingPercent < 0.90 && addMisingPercent > 0.70) {
+
+      if (manualMargin < 0.90 && manualMargin > 0) {
         // let newCalc = 0.90 - calclPercent; 
         // console.log(newCalc);
-        
-        productMedia.style = `filter: brightness(${addMisingPercent})`;
+
+        productMedia.style = `filter: brightness(${manualMargin})`;
       }
     }
   }
 
-  function detectDevice() {
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isMobile = /android|iphone|ipad|ipod|blackberry|opera mini|iemobile|mobile/i.test(userAgent) || window.innerWidth < 768;
+  function isMobile() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    return width < 768;
+  }
 
-    if (isMobile) {      
-      window.addEventListener('scroll', checkScrollPositionPDPMedia);
-    }
+  if (isMobile()) {
+    checkScrollPositionPDPMedia();
+    window.addEventListener('scroll', checkScrollPositionPDPMedia); 
+  } else {
+    productMedia.removeAttribute('style');
+    window.removeEventListener('scroll', checkScrollPositionPDPMedia);
   }
 
   // Listen to scroll event
-  window.addEventListener('resize', ()=>{
+  window.addEventListener('resize', () => {
     // Call the function
-    detectDevice();
+    if (isMobile()) {
+      checkScrollPositionPDPMedia();
+      window.addEventListener('scroll', checkScrollPositionPDPMedia);
+    } else {
+      productMedia.removeAttribute('style');
+      window.removeEventListener('scroll', checkScrollPositionPDPMedia);
+    }
   });
-
-  // Also check scroll position on page load
-  checkScrollPositionPDPMedia();
-  detectDevice();
 }
 
 // SPLIDE CDN INIT
@@ -1373,7 +1381,7 @@ if (!customElements.get('announcement-bar-slider')) {
     }
 
     initSlider() {
-      this.slider = new Splide(this,{
+      this.slider = new Splide(this, {
         autoScroll: {
           speed: 1,
         },
@@ -1406,7 +1414,7 @@ if (!customElements.get('ticket-slider')) {
     }
 
     initSlider() {
-      this.slider = new Splide(this,{
+      this.slider = new Splide(this, {
         // autoScroll: {
         //   speed: 1,
         // },
@@ -1434,3 +1442,23 @@ if (!customElements.get('ticket-slider')) {
   );
 }
 
+// PDP VISION 2 DESCRIPTION BTN
+const pdpVision2Wrapper = document.querySelector('.product--vision-2');
+
+if (pdpVision2Wrapper) {
+  let descriptionButton = document.querySelector('.js-pdp-vision-2-description-btn');
+
+  if (descriptionButton) {
+    descriptionButton.addEventListener('click', () => {
+      let productDescription = pdpVision2Wrapper.querySelector('.product__description');
+
+      if (productDescription.classList.contains('my-limit-height')) {
+        productDescription.classList.remove('my-limit-height');
+        descriptionButton.textContent = 'Read less';
+      } else {
+        productDescription.classList.add('my-limit-height');
+        descriptionButton.textContent = 'Read more';
+      }
+    });
+  }
+}

@@ -39,6 +39,10 @@
             "show_gift_card_recipient": true
           }
         },
+        "description_aHMdDy": {
+          "type": "description",
+          "settings": {}
+        },
         "collapsible_tab_Aim3yb": {
           "type": "collapsible_tab",
           "settings": {
@@ -56,12 +60,14 @@
         "tickets_t8P4Mt",
         "variant_picker",
         "buy_buttons",
+        "description_aHMdDy",
         "collapsible_tab_Aim3yb"
       ],
       "settings": {
+        "pdp_v2_content_text_align_center": false,
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",

@@ -195,9 +195,13 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
-                  </div>
+                  <div class="product__description-wrapper">
+                    <div class="product__description my-limit-height rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      {{ product.description }}
+                    </div>
+
+                    <span class="product__description-btn js-pdp-vision-2-description-btn">Read more</span>
+                  </div><!-- /.product__description-wrapper -->
                 {%- endif -%}
               {%- when 'sku' -%}
                 <p
