@@ -42,15 +42,6 @@
         "description_aHMdDy": {
           "type": "description",
           "settings": {}
-        },
-        "collapsible_tab_Aim3yb": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "PRODUCT DETAILS",
-            "icon": "eye",
-            "content": "{{ product.description }}",
-            "page": ""
-          }
         }
       },
       "block_order": [
@@ -60,8 +51,7 @@
         "tickets_t8P4Mt",
         "variant_picker",
         "buy_buttons",
-        "description_aHMdDy",
-        "collapsible_tab_Aim3yb"
+        "description_aHMdDy"
       ],
       "settings": {
         "pdp_v2_content_text_align_center": false,
