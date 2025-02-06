@@ -67,6 +67,8 @@ cart-items {
 
 .cart__footer-wrapper:last-child .cart__footer {
   padding-bottom: 5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .cart__footer > div:only-child {

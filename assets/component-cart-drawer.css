@@ -114,8 +114,15 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__footer {
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
   position: relative;
-  padding: 6.4vw 6.4vw;
+  padding: 2rem;
   margin: 0 -1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .drawer__footer {
+    padding: 1.5rem 6.4vw 3rem;
+  }
 }
 
 .drawer__footer:after {

@@ -668,34 +668,37 @@
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
               {%- when 'tickets' -%}
-                {% if block.settings.slide_1_icon != blank or block.settings.slide_1_text != blank %}
+                {% if product.metafields.custom.tickets_pdpv2 != blank %}
                   <ticket-slider class="splide tickets" role="group">
                     <div class="splide__track">
                       <ul class="splide__list">
-                        {% if block.settings.slide_1_icon != blank or block.settings.slide_1_text != blank %}
-                          <li class="splide__slide">
-                            <div class="ticket">
-                              {% if block.settings.slide_1_icon != blank %}
-                                {%- assign icon = block.settings.slide_1_icon -%}
+                        {% if product.metafields.custom.tickets_pdpv2 != blank %}
+                          {% for meta_object in product.metafields.custom.tickets_pdpv2.value  %}
+
+                            <li class="splide__slide">
+                              <div class="ticket">
+                                {%- assign icon = meta_object['image'].value -%}
 
                                 <div class="ticket__image">
                                   {{ icon | image_url: width: icon.width | image_tag: class: 'add_your_class_here', loading: 'lazy' }}
                                 </div><!-- /.ticket__image -->
     
-                                {% if block.settings.slide_1_text != blank %}
-                                  <p>{{ block.settings.slide_1_text }}</p>
+                                {% if meta_object['text'] != blank %}
+                                  <p>{{ meta_object['text'].value }}</p>
                                 {% endif %}
-                              {% endif %}
-                            </div><!-- /.ticket -->
-                          </li>
-                        {% endif %}
-                        <li class="splide__slide">VVS1</li>
+                              </div><!-- /.ticket -->
+                            </li>
+                          {% endfor %}
+                        {% else %}
+                            No metafield found.
+                        {% endif %}   
                       </ul>
                     </div>
                   </ticket-slider>       
                 {% endif %}
             {%- endcase -%}
           {%- endfor -%}
+
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
