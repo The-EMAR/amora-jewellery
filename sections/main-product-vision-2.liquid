@@ -668,6 +668,13 @@
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
               {%- when 'tickets' -%}
+                {% comment %} 
+                Get Pdp metafield - custom.tickets_pdpv2
+                Metaobject - meta_object in product.metafields.custom.tickets_pdpv2.[value] or [array] of Metaobjects 
+                 - Image - meta_object['image'].value
+                 - Text - meta_object['text'].value
+                {% endcomment %}
+
                 {% if product.metafields.custom.tickets_pdpv2 != blank %}
                   <ticket-slider class="splide tickets" role="group">
                     <div class="splide__track">
