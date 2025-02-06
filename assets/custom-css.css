@@ -93,7 +93,7 @@
 .tickets .ticket {
   display: flex;
   align-items: center;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   column-gap: 1rem;
 }
 
