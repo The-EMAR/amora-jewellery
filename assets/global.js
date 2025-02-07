@@ -1315,8 +1315,6 @@ if (pdpVision2) {
   const mediaWrapper = pdpVision2.querySelector('.product__media-wrapper');
   const productMedia = pdpVision2.querySelector('.product__media-list');
 
-
-
   function checkScrollPositionPDPMedia() {
     let infoWrapperTop = infoWrapper.getBoundingClientRect().top;
     let mediaWrapperBottom = mediaWrapper.getBoundingClientRect().bottom;
@@ -1324,7 +1322,7 @@ if (pdpVision2) {
     // console.log('Bottom Image: ' + mediaWrapperBottom + ' Info Top: ' + infoWrapperTop);
 
     if (mediaWrapperBottom < infoWrapperTop) {
-      productMedia.style = `filter: brightness(1.1)`;
+      productMedia.style = `filter: brightness(1.03)`;
     }
 
     if (mediaWrapperBottom > infoWrapperTop) {
@@ -1332,7 +1330,7 @@ if (pdpVision2) {
       let manualMargin = calclPercent + 0.20;
 
       if (manualMargin > 0.90) {
-        productMedia.style = `filter: brightness(1.1)`;
+        productMedia.style = `filter: brightness(1.03)`;
       }
 
       if (manualMargin < 0.90 && manualMargin > 0) {
