@@ -1,3 +1,5 @@
+{% comment %} Snippet Modified to autocalculate percenetage by compare with price {% endcomment %}
+
 {% comment %}
   Renders a list of product's price (regular, sale)
 
@@ -21,8 +23,8 @@
     assign target = product
   endif
 
-  assign compare_at_price = target.compare_at_price
-  assign price = target.price | default: 1999
+  assign compare_at_price = target.compare_at_price | plus: 0.0
+  assign price = target.price | default: 1999 | plus: 0.0
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
@@ -37,6 +39,13 @@
 
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+  endif
+
+  assign discount_percentage = 0.0
+  if compare_at_price > price
+    assign discount_amount = compare_at_price | minus: price
+    assign discount_ratio = discount_amount | divided_by: compare_at_price | times: 100
+    assign discount_percentage = discount_ratio | ceil
   endif
 -%}
 
@@ -125,7 +134,11 @@
     </div>
     {%- if show_badges -%}
       <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-        {{ 'products.product.on_sale' | t }}
+        {% if compare_at_price %}
+          <span>-{{ discount_percentage }}%</span>
+        {% else %}
+          {{ 'products.product.on_sale' | t }}
+        {% endif %}
       </span>
 
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
