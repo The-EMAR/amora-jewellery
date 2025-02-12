@@ -187,12 +187,31 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "slider_collections_images_NcNDiT": {
+      "type": "slider-collections-images",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "collection_list": [
+          "44-label-groups",
+          "alexander-mcquenn",
+          "burberry",
+          "fendi",
+          "gucci",
+          "lacoste",
+          "louis-vuitton",
+          "prada"
+        ],
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "featured_collection_AFHNbp",
-    "collection_list_8m7GJx"
+    "collection_list_8m7GJx",
+    "slider_collections_images_NcNDiT"
   ]
 }

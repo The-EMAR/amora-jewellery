@@ -189,6 +189,7 @@
   .footer-block__newsletter:not(:only-child) {
     text-align: left;
     margin-right: auto;
+    flex: 0 0 33%;
   }
 
   .footer-block__newsletter:not(:only-child) .footer__newsletter {

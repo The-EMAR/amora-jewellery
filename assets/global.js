@@ -1417,10 +1417,16 @@ if (!customElements.get('collections-images-slider')) {
         },
         // direction: 'ttb',
         // height: 30,
+        perPage: 5,
         arrows: false,
         pagination: false,
         type: 'loop',
         // autoplay: true,
+        breakpoints: {
+          767: {
+            perPage: 3,
+          },
+        }
       })
 
       this.slider.mount(window.splide.Extensions);

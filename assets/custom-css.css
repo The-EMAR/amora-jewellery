@@ -259,3 +259,37 @@
   }
 }
 
+/* slider-collections-images */
+
+.slider-collections-images .page-width {
+  padding: 0;
+  max-width: 100%;
+}
+
+.slider-collections-images .slider-collections-images__image {
+  display: block;
+  cursor: pointer;
+  max-width: 60rem;
+}
+
+
+.slider-collections-images .slider-collections-images__image img { 
+  max-width: 20rem;
+  max-height: 20rem;
+  opacity: 1;
+  transition: .3s opacity;
+}
+
+.slider-collections-images .slider-collections-images__image img:hover {
+  opacity: .8;
+  transition: .3s opacity;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .slider-collections-images .slider-collections-images__image img { 
+    max-width: 12rem;
+    max-height: 12rem;
+  }
+}
+

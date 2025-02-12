@@ -15,7 +15,7 @@
 {% assign collectionList = section.settings.collection_list %}
 
 {% if collectionList != blank %}
-  <div class="slider-collections-images color-{{ section.settings.color_scheme }}">
+  <div class="slider-collections-images color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding">
     <div class="page-width">
       <collections-images-slider class="splide collections-images" role="group">
         <div class="splide__track">
@@ -23,7 +23,7 @@
             {% for collection in collectionList %}
               {% if collection.featured_image != blank %}
                 <div class="splide__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
-                  <div class="slider-collections-images__image">
+                  <a href="{{ collection.url }}" class="slider-collections-images__image">
                     <img
                       srcset="
                         {%- if collection.featured_image.width >= 165 -%}{{ collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -47,7 +47,7 @@
                       loading="lazy"
                       class="motion-reduce"
                     >
-                  </div><!-- /.slider-collections-images__image -->
+                  </a><!-- /.slider-collections-images__image -->
                 </div>
               {% endif %}
             {% endfor %}
