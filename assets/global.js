@@ -1402,6 +1402,38 @@ if (!customElements.get('announcement-bar-slider')) {
   );
 }
 
+if (!customElements.get('collections-images-slider')) {
+  class CollectionsImagesSlider extends HTMLElement {
+    constructor() {
+      super();
+
+      this.initSlider();
+    }
+
+    initSlider() {
+      this.slider = new Splide(this, {
+        autoScroll: {
+          speed: 1,
+        },
+        // direction: 'ttb',
+        // height: 30,
+        arrows: false,
+        pagination: false,
+        type: 'loop',
+        // autoplay: true,
+      })
+
+      this.slider.mount(window.splide.Extensions);
+      // initSplide.mount();
+    }
+  }
+
+  customElements.define(
+    'collections-images-slider',
+    CollectionsImagesSlider,
+  );
+}
+
 // PDP VISION 1 - TICKET SLIDER
 if (!customElements.get('ticket-slider')) {
   class TicketSlider extends HTMLElement {
