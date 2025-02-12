@@ -1,10 +1,11 @@
 {
   "current": {
-    "logo_width": 50,
-    "favicon": "shopify:\/\/shop_images\/Facebook-logo-white-background.png",
-    "type_header_font": "playfair_display_n4",
+    "logo": "shopify:\/\/shop_images\/NEXTMAN-logo.png",
+    "logo_width": 130,
+    "favicon": "shopify:\/\/shop_images\/NEXTMAN_3.png",
+    "type_header_font": "noto_sans_display_n7",
     "heading_scale": 100,
-    "type_body_font": "lora_n4",
+    "type_body_font": "open_sans_n4",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -100,7 +101,7 @@
     "brand_headline": "",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
-    "social_facebook_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=61572537262106",
     "social_instagram_link": "",
     "social_youtube_link": "",
     "social_tiktok_link": "",
@@ -133,6 +134,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "13669795325273674392": {
+        "type": "shopify:\/\/apps\/releasit-cod-form\/blocks\/app-embed\/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -186,6 +194,17 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
+          "shadow": "#121212"
+        }
+      },
+      "scheme-43fbfc6e-d0f5-47d5-aa87-2e5386ba04ea": {
+        "settings": {
+          "background": "#f73131",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#f73131",
+          "button_label": "#f73131",
+          "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
       }
@@ -382,5 +401,8 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": []
   }
 }

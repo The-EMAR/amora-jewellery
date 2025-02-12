@@ -113,7 +113,7 @@
 
 /* Global */
 .product--vision-2 .my-limit-height {
-  max-height: 15rem;
+  max-height: 9rem;
   overflow: hidden;
 }
 
@@ -257,9 +257,5 @@
     width: 100%;
     max-width: 100%;
   }
-
-
-
-  
-
 }
+

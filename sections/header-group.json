@@ -5,23 +5,15 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_YkErDa": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store 2",
-            "link": ""
-          }
-        },
         "announcement_UHeVdF": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Безплатна доставка над 100лв",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement_YkErDa",
         "announcement_UHeVdF"
       ],
       "settings": {
@@ -47,8 +39,8 @@
         "enable_customer_avatar": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },

@@ -32,38 +32,58 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
           }
         },
         "description_aHMdDy": {
           "type": "description",
           "settings": {}
         },
-        "collapsible_tab_UkHLgH": {
+        "collapsible_tab_L7qhHK": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "eye",
-            "content": "",
+            "heading": "Стандарти за качество",
+            "icon": "check_mark",
+            "content": "<p>Като посредник за доставки на дизайнерски стоки, ние се ангажираме да предлагаме продукти, които отговарят на високите стандарти за качество, наложени в Европейския съюз. Нашата роля е да осигурим, че всички артикули, които предлагаме, са произведени от доверени доставчици, които спазват стандарти за качество, наложени от Европейския съюз. <\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_KyqWTm": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Контрол на качеството",
+            "icon": "check_mark",
+            "content": "<p>Преди изпращане към клиента, продуктите преминават проверки за издръжливост, качество на материала и безопасност на мастилата.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_brMH3Y": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Гаранция за удовлетвореност",
+            "icon": "check_mark",
+            "content": "<p>В случай на несъответствие с описаните стандарти, съдействаме за разрешаване на въпроса чрез замяна или връщане на продукта.<\/p><p>Нашата мисия е да бъдем надежден посредник между клиентите и качествените производители, като гарантираме високи стандарти и удовлетвореност от всеки закупен продукт.<\/p>",
             "page": ""
           }
         },
         "collapsible_tab_x7aeQH": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "eye",
-            "content": "",
+            "heading": "Безплатна замяна за друг размер",
+            "icon": "check_mark",
+            "content": "<ul><li><strong>Замяна на продукт:<\/strong> Можете да замените продукт за друг размер, цвят или модел.<\/li><\/ul>",
             "page": ""
           }
         },
-        "collapsible_tab_hNxCfX": {
+        "collapsible_tab_9G9ydV": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "eye",
-            "content": "",
+            "heading": "Политика за връщане",
+            "icon": "check_mark",
+            "content": "<ul><li><strong>Срок за връщане:<\/strong> Можете да върнете продукт в рамките на 30 дни от датата на получаване.<\/li><\/ul><p><\/p><ul><li><strong>Условия за връщане:<\/strong> Продуктът трябва да е в оригиналната си опаковка, без следи от употреба.<\/li><\/ul><p><\/p><ul><li><strong>Връщане на сума:<\/strong> Връщането на сумата се извършва в рамките на до 14 дни от датата на получаване на върнатия продукт.<br\/><strong>Получаването на парите обратно се осъществява по банков път.<\/strong><\/li><\/ul>",
             "page": ""
           }
         }
@@ -76,16 +96,18 @@
         "variant_picker",
         "buy_buttons",
         "description_aHMdDy",
-        "collapsible_tab_UkHLgH",
+        "collapsible_tab_L7qhHK",
+        "collapsible_tab_KyqWTm",
+        "collapsible_tab_brMH3Y",
         "collapsible_tab_x7aeQH",
-        "collapsible_tab_hNxCfX"
+        "collapsible_tab_9G9ydV"
       ],
       "settings": {
         "pdp_v2_content_text_align_center": false,
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "medium",
-        "constrain_to_viewport": true,
+        "constrain_to_viewport": false,
         "media_fit": "contain",
         "gallery_layout": "stacked",
         "media_position": "left",
@@ -100,12 +122,12 @@
     "featured_collection_MLL9i4": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
+        "title": "Препоръчани",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "bracelets",
+        "collection": "louis-vuitton",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,

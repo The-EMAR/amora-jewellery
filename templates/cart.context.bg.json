@@ -1,0 +1,17 @@
+{
+  "parent": "cart.json",
+  "context": {
+    "market": "bg"
+  },
+  "sections": {
+    "main_cart_footer_QVexkn": {
+      "settings": {},
+      "blocks": {
+        "buttons_GzaGEx": {
+          "disabled": false,
+          "settings": {}
+        }
+      }
+    }
+  }
+}

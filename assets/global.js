@@ -1452,10 +1452,10 @@ if (pdpVision2Wrapper) {
 
       if (productDescription.classList.contains('my-limit-height')) {
         productDescription.classList.remove('my-limit-height');
-        descriptionButton.textContent = 'Read less';
+        descriptionButton.textContent = 'Затвори';
       } else {
         productDescription.classList.add('my-limit-height');
-        descriptionButton.textContent = 'Read more';
+        descriptionButton.textContent = 'Виж още';
       }
     });
   }

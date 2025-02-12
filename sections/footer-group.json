@@ -4,10 +4,23 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "image_mCGP38": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/NEXTMEN-black_041a7312-82d7-4bf6-b457-fc5839b287c9.png",
+            "image_width": 215,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_mCGP38"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Вземете -10% намаление на посочения от вас имейл.",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
