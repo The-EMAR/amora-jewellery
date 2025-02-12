@@ -1425,6 +1425,9 @@ if (!customElements.get('collections-images-slider')) {
         breakpoints: {
           767: {
             perPage: 3,
+            autoScroll: {
+              speed: .5,
+            },
           },
         }
       })

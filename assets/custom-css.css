@@ -262,8 +262,14 @@
 /* slider-collections-images */
 
 .slider-collections-images .page-width {
-  padding: 0;
-  max-width: 100%;
+
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .slider-collections-images .page-width {
+    padding: 0;
+  }
 }
 
 .slider-collections-images .slider-collections-images__image {
@@ -293,3 +299,36 @@
   }
 }
 
+
+/* card--vision-2 */ 
+
+.card--vision-2 {
+  flex-direction: column-reverse !important;
+  position: relative;
+  border-left: .1rem solid;
+}
+
+.card--vision-2 .card__content {
+  border-bottom: .1rem solid;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+.card--vision-2 .card__content .card__information {
+  padding: 1.5rem;
+  margin-top: auto;
+  background-color: white;
+}
+
+.card--vision-2 .card__inner .card__content{
+  display: none;
+}
+
+.card--vision-2 .card__content > h3 {
+  font-size: calc(var(--font-heading-scale)* 1.2rem);
+}
